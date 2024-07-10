@@ -14,6 +14,7 @@ build:
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
   number: 0
+  noarch: python
 
 requirements:
   host:
