@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha256: 922a38307906bfca192845ad6b40b65bdf3db8b2ddc35ac133b36072ecf249fe
+  sha256: 219498acee3da06fa3eef100da3dd7021f3f5fc16e51476448e166a721f3d912
 
 build:
   skip: True  # [py<39]
