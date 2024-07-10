@@ -1,5 +1,5 @@
 {% set name = "labbench" %}
-{% set version = "0.37.0" %}
+{% set version = "0.38.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha256: 922a38307906bfca192845ad6b40b65bdf3db8b2ddc35ac133b36072ecf249fe
+  sha256: 219498acee3da06fa3eef100da3dd7021f3f5fc16e51476448e166a721f3d912
 
 build:
   skip: True  # [py<39]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
   number: 0
+  noarch: python
 
 requirements:
   host:
@@ -40,9 +41,11 @@ requirements:
     - pyvisa >=1.8
     - pyvisa-py >=0.6
     - pyvisa-sim >=0.5.1
-    - pywin32-on-windows  # [win]
+    - pywin32   # [win]
     - comtypes  # [win]
     - libusb
+    - __unix    # [unix]
+    - __win     # [win]
 
 test:
   imports:
