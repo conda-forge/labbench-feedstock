@@ -42,10 +42,6 @@ requirements:
     - pyvisa-sim >=0.5.1
     - pywin32
     - libusb
-    - {{ virtual_pkg|default("__unix") }}
-  {% if virtual_pkg == "__win" %}
-    - comtypes
-  {% endif %}
 
 test:
   imports:
