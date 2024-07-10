@@ -10,6 +10,7 @@ source:
   sha256: 219498acee3da06fa3eef100da3dd7021f3f5fc16e51476448e166a721f3d912
 
 build:
+  skip: True  # [py<39]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
   number: 0
@@ -17,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python
     - pip
     - hatchling
     - typing-extensions
     - future
   run:
-    - python >=3.9
+    - python
     - psutil >=5.0
     - validators >=0.20.0
     - pip
@@ -40,8 +41,11 @@ requirements:
     - pyvisa >=1.8
     - pyvisa-py >=0.6
     - pyvisa-sim >=0.5.1
-    - pywin32
+    - pywin32   # [win]
+    - comtypes  # [win]
     - libusb
+    - __unix    # [unix]
+    - __win     # [win]
 
 test:
   imports:
