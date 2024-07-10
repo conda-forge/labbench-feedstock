@@ -41,11 +41,8 @@ requirements:
     - pyvisa >=1.8
     - pyvisa-py >=0.6
     - pyvisa-sim >=0.5.1
-    - pywin32   # [win]
-    - comtypes  # [win]
+    - pywin32
     - libusb
-    - __unix    # [unix]
-    - __win     # [win]
 
 test:
   imports:
