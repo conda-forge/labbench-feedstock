@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - hatchling
     - typing-extensions
     - future
   run:
-    - python >=3.8
+    - python >=3.9
     - psutil >=5.0
     - validators >=0.20.0
     - pip
