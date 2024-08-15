@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha256: 219498acee3da06fa3eef100da3dd7021f3f5fc16e51476448e166a721f3d912
+  sha256: bfbd5a05bf2bec901a33433a1ebb7094152b293f5d084d51eac68309de677e33
 
 build:
   skip: true  # [py<39]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
-  number: 0
+  number: 2
   noarch: python
 
 requirements:
