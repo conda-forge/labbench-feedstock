@@ -1,5 +1,5 @@
 {% set name = "labbench" %}
-{% set version = "0.41.0" %}
+{% set version = "0.42.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha256: ceef2edbb1515c59b130d9b8d65d07656829b510b21ed206107187e309e51815 
+  sha-256: 693bc6975dca21d6852e6abd6c0af399459da058f304f922bc217e7140a1495b
 
 build:
   skip: true  # [py<39]
