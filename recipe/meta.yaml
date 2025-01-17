@@ -6,25 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
   sha-256: 693bc6975dca21d6852e6abd6c0af399459da058f304f922bc217e7140a1495b
 
 build:
   skip: true  # [py<39]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
     - typing-extensions
     - future
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - psutil >=5.0
     - validators >=0.20.0
     - pip
@@ -56,6 +56,7 @@ test:
     - labbench --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: The `labbench` module provides API tools to support python scripting for laboratory automation.The goal is to simplify the process of developing an experimental procedure into clear, concise, explainable, and reusable code.
