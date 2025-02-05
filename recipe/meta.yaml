@@ -1,5 +1,5 @@
 {% set name = "labbench" %}
-{% set version = "0.42.0" %}
+{% set version = "0.43.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha-256: 693bc6975dca21d6852e6abd6c0af399459da058f304f922bc217e7140a1495b
+  sha256: 4177a68b441ebaa557441d6fbf977819ea57f88912bc6bf3d5f87b1385f74ec4
 
 build:
   skip: true  # [py<39]
@@ -32,7 +32,7 @@ requirements:
     - click >=8.0,<9.dev0
     - dulwich >=0.20
     - numpy >=1.19
-    - pandas >=1.2.0,<2.2
+    - pandas >=1.2.0,<3
     - ruamel.yaml >=0.17.21
     - feather-format >=0.4.0
     - sqlalchemy >=1.4,<2
