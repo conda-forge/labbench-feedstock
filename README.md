@@ -189,5 +189,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@dgkuester](https://github.com/dgkuester/)
+* [@dgkuester-nist](https://github.com/dgkuester-nist/)
 
