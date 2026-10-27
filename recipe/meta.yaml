@@ -10,7 +10,6 @@ source:
   sha256: 8c0b14b198669b0e577055be880c2709e430f9f79451e7a36b44c080d853cea4
 
 build:
-  skip: true  # [py<312]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
   number: 0
