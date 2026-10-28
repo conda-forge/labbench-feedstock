@@ -1,5 +1,5 @@
 {% set name = "labbench" %}
-{% set version = "0.45.1" %}
+{% set version = "0.46.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/labbench-{{ version }}.tar.gz
-  sha256: 926082b324e4f78db9606ec0b0c2aff1eb4cccd07d3c601b028ee3046806b9b4
+  sha256: 8c0b14b198669b0e577055be880c2709e430f9f79451e7a36b44c080d853cea4
 
 build:
-  skip: true  # [py<39]
   entry_points:
     - labbench = labbench.cli.__main__:do_cli
   number: 0
@@ -21,8 +20,6 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatchling
-    - typing-extensions
-    - future
   run:
     - python >={{ python_min }}
     - psutil >=5.0
@@ -32,18 +29,20 @@ requirements:
     - click >=8.0,<9.dev0
     - dulwich >=0.20
     - numpy >=1.19
-    - pandas >=1.2.0,<3
+    - pandas >=1.2.0
     - ruamel.yaml >=0.17.21
     - feather-format >=0.4.0
-    - sqlalchemy >=1.4,<2
+    - sqlalchemy >=1.4
     - pyarrow >=14
     - pyserial >=3.0
     - pyvisa >=1.8
     - pyvisa-py >=0.6
+    - pyusb
     - pyvisa-sim >=0.5.1
     - pywin32   # [win]
     - comtypes  # [win]
     - libusb
+    - libusb1 >=3.1.0
     - __unix    # [unix]
     - __win     # [win]
 
@@ -67,4 +66,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - dgkuester
+    - dgkuester-nist
